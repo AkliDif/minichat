@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Chat</title>
+    <title>Minichat</title>
 </head>
 <body>
-    <span align="center">
-    <a href="connexion.php"><button value="Connexion">Connexion</button></a></br>
-    <a href="inscription.php"><button value="inscription">Inscription</button></a>
-    </span>
+    <a href="connexion.php"><Button value='Connexion'> Connexion </Button></br></a>
+
+    <a href="inscription.php"><Button value='Inscription'> Inscription</Button></a></br>
 </body>
 </html>
