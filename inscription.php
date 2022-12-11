@@ -42,7 +42,7 @@ require_once("inc/haut.inc.php");
             <input type="password" name="mdp_conf" placeholder="Confirmer votre mot de passe">
         </div>
     
-        <p class="inscription">J'ai déjà un <span>compte</span>. <a href="#">Je me connecte</p></a>
+        <p class="inscription">J'ai déjà un compte. <a href="connexion.php">Je me connecte</p></a>
         <div align="center">
             <button type="submit">S'inscrire</button>
         </div>

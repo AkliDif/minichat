@@ -3,7 +3,7 @@
 .menu {
     display: flex;                /* Transformation en flexbox */
     padding: 2px;                    /* Suppression des marges internes */
-    background-color: #ccc;       /* Ajout de la couleur d'arrière-plan */
+    background-color: white;       /* Ajout de la couleur d'arrière-plan */
     justify-content: space-around;/* Alignements des liens dans le menu */
 	position: relative;
 }
@@ -18,7 +18,7 @@
     margin: 0.5rem;               /* Marges externes */
     padding: 0.4rem 0;            /* Marges internes */
     text-align: center;           /* Centrage du texte */   
-    background-color: #eb7371;    /* Arrière-plan */
+    background-color: rgb(180, 226, 52);    /* Arrière-plan */
     color: #fff;                  /* Couleur du texte */
     text-decoration: none;        /* Suppression du soulignement */
     border: 1px solid #fff;       /* Ajout d'une bordure */
@@ -29,8 +29,8 @@
 
 .menu a.actif {    
     background-color: #000 ; 
-    color: #eb7371 ;
-    border-color: #eb7371 ;
+    color: rgb(180, 226, 52) ;
+    border-color: rgb(180, 226, 52) ;
 }
 .menu a:hover,
 .menu a:hover.actif{
@@ -49,8 +49,8 @@ form {
 }
 
 form h1{
-  color: #eb7371;
-  text-align:center;
+  	color: rgb(180, 226, 52);
+  	text-align:center;
 }
 
 
@@ -83,7 +83,7 @@ form p.inscription{
 
 
 form p.inscription span{
-  color: #eb7371;
+  color: rgb(180, 226, 52);
 }
 
 
@@ -93,7 +93,7 @@ form button{
   border:none;
   font-size: 15px;
   color: #fff;
-  background-color: #eb7371;
+  background-color: rgb(180, 226, 52);
   outline:none;
   cursor:pointer;
 }
@@ -107,9 +107,9 @@ form button{
 body{
 	display: flex;
 	justify-content:center;
-	flex-direction: columns;
+	flex-direction: column;
 	align-items: center;
-	background-color: #f5f5f5;
+	background-color: #5376e7;
 	font-family: 'Roboto', sans-serif;
 	background: "#";
 	background-size: cover;
@@ -198,7 +198,7 @@ h2 {
 }
 
 footer {
-    background-color: #222;
+    background-color: rgb(180, 226, 52);
     color: #fff;
     font-size: 14px;
     bottom: 0;

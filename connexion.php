@@ -51,7 +51,7 @@ echo $contenu;
     <label for="mdp">Mot de passe</label><br />
     <input type="password" id="mdp" name="mdp" /><br /><br />
  
-    <p class="inscription">Je n'ai pas de <span>compte</span>. <a href="#">Je m'en <span>crée</span> un.</p></a>
+    <p class="inscription">Je n'ai pas de compte. <a href="inscription.php">Je m'en crée un.</p></a>
     <div align="center">
       <button type="submit">Se connecter</button>
     </div>
