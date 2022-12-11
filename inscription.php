@@ -31,7 +31,7 @@ require_once("inc/haut.inc.php");
 
 <form method="POST" action ="">
      
-        <h1>Se connecter</h1>
+        <h1>INSCRIPTION</h1>
     
         <div class="inputs">
             <input type="nom" name = "nom" placeholder="Nom" />
