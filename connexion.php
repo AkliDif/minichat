@@ -4,7 +4,8 @@ require_once("./inc/config.php");
 //--------------------------------- TRAITEMENTS PHP ---------------------------------//
 if(isset($_GET['action']) && $_GET['action'] == "deconnexion") 
 {
-	session_destroy(); 
+	session_destroy();
+    header ('location:connexion.php');
 }
 
 
@@ -41,15 +42,19 @@ if($_POST)
 require_once("inc/haut.inc.php");
 echo $contenu;
 ?>
-<p class="forms-titles">CONNEXION</p>
+
 <form method="post" action="" class="forms">
+<h1>CONNEXION</h1>
     <label for="email">Email</label><br />
     <input type="text" id="email" name="email" /><br /> <br />
          
     <label for="mdp">Mot de passe</label><br />
     <input type="password" id="mdp" name="mdp" /><br /><br />
  
-     <input type="submit" value="CONNEXION"/>
+    <p class="inscription">Je n'ai pas de <span>compte</span>. <a href="#">Je m'en <span>crée</span> un.</p></a>
+    <div align="center">
+      <button type="submit">Se connecter</button>
+    </div>
 </form>
 
 <?php
