@@ -1,6 +1,6 @@
 
 <?php
-require_once("config.php");
+require_once("./inc/config.php");
 //--------------------------------- TRAITEMENTS PHP ---------------------------------//
 if(isset($_GET['action']) && $_GET['action'] == "deconnexion") 
 {
@@ -38,6 +38,7 @@ if($_POST)
     }
 }
 
+require_once("inc/haut.inc.php");
 echo $contenu;
 ?>
 <p class="forms-titles">CONNEXION</p>
@@ -50,3 +51,6 @@ echo $contenu;
  
      <input type="submit" value="CONNEXION"/>
 </form>
+
+<?php
+require_once("inc/bas.inc.php");
