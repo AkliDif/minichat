@@ -28,14 +28,13 @@ if($_POST)
         }
         else
         {
-            $contenu .= 'Erreur de MDP';
+            $contenu .= '<div class="erreur"> Mot de passe incorrecte </div>';
         }       
     }
     else
     {
-        $contenu .= 'Aucun compte trouvé avec cette adresse mail
-        <a href=".\inscription.php\"><u>Cliquez ici pour vous inscrire</u></a>
-        ';
+        $contenu .= "<div class='erreur'> Aucun compte trouvé avec cette adresse mail <a href='./inscription.php'><u>Cliquez ici pour vous inscrire</u></a>
+        </div>";
     }
 }
 
@@ -43,7 +42,7 @@ require_once("inc/haut.inc.php");
 echo $contenu;
 ?>
 
-<form method="post" action="" class="forms">
+<form method="post" action="" class="form">
     <h1>CONNEXION</h1>
     <label for="email">Email</label><br />
     <input type="text" id="email" name="email" /><br /> <br />

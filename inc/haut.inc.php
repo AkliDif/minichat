@@ -8,33 +8,35 @@
     <body>    
         <header class="mainHead">                    
 					<h1 class="logo">Minichat</h1>
-					<?php
-					if(internauteEstConnecteEtEstAdmin())
-					{ 	
+					<nav>
+						<?php
+						if(internauteEstConnecteEtEstAdmin())
+						{ 	
 
-						echo '<ul class="menu">
-						<li><a href="#">Gestion des membres</a></li>
-						</ul>';
-						//    ./admin/gestion_membre.php
-					}
-					elseif(internauteEstConnecte())
-					{
-						echo '
-						<ul class="menu">
-						<li><a href="#">Profil</a></li>';
-						echo '<li><a href="./connexion.php?action=deconnexion">Déconnexion</a></li>
-						</ul>';
-						//  ./profil.php
-					}
-					else
-					{
-						echo '<ul class="menu">
-						<li><a href="./inscription.php">Inscription</a></li>';
-						echo '<li><a href="./connexion.php">Connexion</a></li>';
-						echo '</ul>';
-					}
+							echo '<ul>
+							<li><a href="#">Gestion des membres</a></li>
+							</ul>';
+							//    ./admin/gestion_membre.php
+						}
+						elseif(internauteEstConnecte())
+						{
+							echo '
+							<ul>
+							<li><a href="#">Profil</a></li>';
+							echo '<li><a href="./connexion.php?action=deconnexion">Déconnexion</a></li>
+							</ul>';
+							//  ./profil.php
+						}
+						else
+						{
+							echo '<ul>
+							<li><a href="./inscription.php">Inscription</a></li>';
+							echo '<li><a href="./connexion.php">Connexion</a></li>';
+							echo '</ul>';
+						}
 
-					?>
+						?>
+					</nav>
         </header>
         <section>
 			<div class="conteneur"> 
