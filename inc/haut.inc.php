@@ -7,12 +7,13 @@
     </head>
     <body>    
         <header class="mainHead">                    
-					<h1 class="logo">Minichat</h1>
+					<h1 class="">Minichat</h1>
+					<nav>
 					<?php
 					if(internauteEstConnecteEtEstAdmin())
 					{ 	
 
-						echo '<ul class="menu">
+						echo '<ul>
 						<li><a href="#">Gestion des membres</a></li>
 						</ul>';
 						//    ./admin/gestion_membre.php
@@ -20,7 +21,7 @@
 					elseif(internauteEstConnecte())
 					{
 						echo '
-						<ul class="menu">
+						<ul>
 						<li><a href="#">Profil</a></li>';
 						echo '<li><a href="./connexion.php?action=deconnexion">Déconnexion</a></li>
 						</ul>';
@@ -28,13 +29,14 @@
 					}
 					else
 					{
-						echo '<ul class="menu">
+						echo '<ul>
 						<li><a href="./inscription.php">Inscription</a></li>';
 						echo '<li><a href="./connexion.php">Connexion</a></li>';
 						echo '</ul>';
 					}
 
 					?>
+					</nav>
         </header>
         <section>
 			<div class="conteneur"> 

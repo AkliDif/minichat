@@ -11,6 +11,7 @@ if (empty($contenu))
         $msg = $_POST['message'];
 
         executeRequete ("INSERT INTO message (id_sender, id_receiver, message, date_heure) VALUES ('$id_sender', '$id_receiver', '$msg', now())");
-        header("location:discussion.php?id_receiver= '.$id_receiver.' ");
+        header("location:discussion.php?id_receiver=$id_receiver");
     }
+
 };

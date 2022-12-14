@@ -8,11 +8,12 @@ if(isset($_GET['action']) && $_GET['action'] == "deconnexion")
     header ('location:connexion.php');
 }
 
-
-if($_POST)
+if (!empty($_POST))
+{
+    if($_POST)
 {
     $resultat = executeRequete("SELECT * FROM client WHERE adr_mail= '$_POST[email]'");
-    if($resultat->num_rows != 0)
+    if($resultat->num_rows > 0)
     {
         $client = $resultat->fetch_assoc();
         if($client['mdp'] == $_POST['mdp'])
@@ -28,22 +29,21 @@ if($_POST)
         }
         else
         {
-            $contenu .= 'Erreur de MDP';
+            $contenu .= '<div class="erreur"> Erreur de MDP </div>';
         }       
     }
     else
     {
-        $contenu .= 'Aucun compte trouvé avec cette adresse mail
-        <a href=".\inscription.php\"><u>Cliquez ici pour vous inscrire</u></a>
-        ';
+        $contenu .= '<div class="erreur"> Aucun compte trouvé avec cette adresse mail</div>';
     }
 }
+}
 
-require_once("inc/haut.inc.php");
+require_once("./inc/haut.inc.php");
 echo $contenu;
 ?>
 
-<form method="post" action="" class="forms">
+<form method="post" action="" class="form">
 <h1>CONNEXION</h1>
     <label for="email">Email</label><br />
     <input type="text" id="email" name="email" /><br /> <br />
@@ -51,7 +51,7 @@ echo $contenu;
     <label for="mdp">Mot de passe</label><br />
     <input type="password" id="mdp" name="mdp" /><br /><br />
  
-    <p class="inscription">Je n'ai pas de <span>compte</span>. <a href="#">Je m'en <span>crée</span> un.</p></a>
+    <p class="connexion">Je n'ai pas de <span>compte</span>. <a href="inscription.php">Je m'en <span>crée</span> un.</p></a>
     <div align="center">
       <button type="submit">Se connecter</button>
     </div>
